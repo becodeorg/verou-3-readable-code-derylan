@@ -3,12 +3,6 @@
 // customer = for who
 function orderPizza($pizzaType, $customer)
 {
-    $type = $pizzaType;
-    echo 'Creating new order... <br>';
-    $toPrint = 'A ';
-    $toPrint .= $pizzaType;
-    $price = calcAmount($type);
-
     $address = 'unknown';
     if ($customer == 'Koen') {
         $address = 'a yacht in Antwerp';
@@ -18,6 +12,11 @@ function orderPizza($pizzaType, $customer)
         $address = 'BeCode office';
     }
 
+    $type = $pizzaType;
+    echo 'Creating new order... <br>';
+    $toPrint = 'A ';
+    $toPrint .= $pizzaType;
+    $price = calcAmount($type);
     $toPrint .=   ' pizza should be sent to ' . $customer . ". <br>The address: {$address}.";
     echo $toPrint;
     echo '<br>';
