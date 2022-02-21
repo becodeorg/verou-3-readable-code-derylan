@@ -1,6 +1,5 @@
 <?php
 
-// customer = for who
 function orderPizza($pizzaType, $customer)
 {
     $address = 'unknown';
@@ -13,26 +12,10 @@ function orderPizza($pizzaType, $customer)
     }
 
     $type = $pizzaType;
-    echo 'Creating new order... <br>';
-    $toPrint = 'A ';
-    $toPrint .= $pizzaType;
     $price = calcAmount($type);
-    $toPrint .=   ' pizza should be sent to ' . $customer . ". <br>The address: {$address}.";
-    echo $toPrint;
-    echo '<br>';
-    echo 'The bill is €' . $price . '.<br>';
-    echo "Order finished.<br><br>";
+    echo "Creating new order... <br> A {$pizzaType} pizza should be sent to {$customer} <br> The address: {$address} <br>
+    The bill is € {$price} <br> Order finished.<br><br>";
 }
-
-// function totalPrice($price)
-// {
-//     return $price;
-// }
-
-// function test($pizzaType)
-// {
-//     echo "Test: type is {$pizzaType}. <br>";
-// }
 
 function calcAmount($pizzaType)
 {
@@ -66,13 +49,4 @@ function orderTotalPizza()
     orderPizza('golden', 'students');
 }
 
-function makeAllHappy($doIt)
-{
-    if ($doIt) {
-        orderTotalPizza();
-    } //else {
-    // Should not do anything when false
-    // }
-}
-
-makeAllHappy(true);
+orderTotalPizza();
