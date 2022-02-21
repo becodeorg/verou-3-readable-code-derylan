@@ -10,9 +10,9 @@ function orderPizza($pizzaType, $customer)
     $price = calcAmount($type);
 
     $address = 'unknown';
-    if ($customer == 'koen') {
+    if ($customer == 'Koen') {
         $address = 'a yacht in Antwerp';
-    } elseif ($customer == 'manuele') {
+    } elseif ($customer == 'Manuele') {
         $address = 'somewhere in Belgium';
     } elseif ($customer == 'students') {
         $address = 'BeCode office';
@@ -61,8 +61,8 @@ function calcAmount($pizzaType)
 function orderTotalPizza()
 {
     $test = 0;
-    orderPizza('calzone', 'koen');
-    orderPizza('marguerita', 'manuele');
+    orderPizza('calzone', 'Koen');
+    orderPizza('marguerita', 'Manuele');
 
     orderPizza('golden', 'students');
 }
