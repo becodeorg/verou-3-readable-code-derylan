@@ -21,30 +21,25 @@ function calcAmount($pizzaType)
 {
     $cost = 'unknown';
 
-    if ($pizzaType == 'marguerita') {
+    if ($pizzaType == 'margherita') {
         $cost = 5;
-    } else {
-        if ($pizzaType == 'golden') {
-            $cost = 100;
-        }
-
-        if ($pizzaType == 'calzone') {
-            $cost = 10;
-        }
-
-        if ($pizzaType == 'hawaii') {
-            throw new Exception('Computer says no');
-        }
     }
-
+    if ($pizzaType == 'golden') {
+        $cost = 100;
+    }
+    if ($pizzaType == 'calzone') {
+        $cost = 10;
+    }
+    if ($pizzaType == 'hawaii') {
+        throw new Exception('Computer says no');
+    }
     return $cost;
 }
 
 function orderTotalPizza()
 {
-    $test = 0;
     orderPizza('calzone', 'Koen');
-    orderPizza('marguerita', 'Manuele');
+    orderPizza('margherita', 'Manuele');
 
     orderPizza('golden', 'students');
 }
