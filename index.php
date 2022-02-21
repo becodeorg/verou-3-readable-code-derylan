@@ -25,15 +25,15 @@ function orderPizza($pizzaType, $customer)
     echo "Order finished.<br><br>";
 }
 
-function totalPrice($price)
-{
-    return $price;
-}
+// function totalPrice($price)
+// {
+//     return $price;
+// }
 
-function test($pizzaType)
-{
-    echo "Test: type is {$pizzaType}. <br>";
-}
+// function test($pizzaType)
+// {
+//     echo "Test: type is {$pizzaType}. <br>";
+// }
 
 function calcAmount($pizzaType)
 {
@@ -71,9 +71,9 @@ function makeAllHappy($doIt)
 {
     if ($doIt) {
         orderTotalPizza();
-    } else {
-        // Should not do anything when false
-    }
+    } //else {
+    // Should not do anything when false
+    // }
 }
 
 makeAllHappy(true);
